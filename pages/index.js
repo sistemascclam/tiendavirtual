@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Layout, { siteTitle } from "@global/layout";
+//import Layout, { siteTitle } from "../components/global/layout";
 
 export default function Home() {
   return (
