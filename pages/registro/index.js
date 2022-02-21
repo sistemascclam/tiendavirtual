@@ -24,7 +24,7 @@ export default function Login() {
     return (
         <Layout home>
             <Head>
-                <title>Inicio de Sesión | {siteTitle}</title>
+                <title>Registro | {siteTitle}</title>
             </Head>
                 <div className='relative'>
                     <div className="grid grid-cols-1 divide-y h-screen     ">
@@ -32,11 +32,11 @@ export default function Login() {
                             <div  className=' min-h-fit bg-mk-blue py-4 px-4'>
                                 <div className=' flex'>
                                     <img
-                                        className=" h-12  bg-slate-50 rounded-lg"
+                                        className=" h-10 w-10  bg-slate-50 rounded-full py-2 px-1"
                                         src="../../images/cclamlogotipo.png"
                                         alt="Logo"
                                     />
-                                    <span className='text-lg text-slate-50 py-2 px-2'><b>MarketPlace</b> </span>
+                                    <span className='text-lg text-slate-50 py-2 px-2'>MarketPlace </span>
                                 </div>
                             </div>
                         </div>
@@ -166,8 +166,11 @@ export default function Login() {
                                         <button  type="button" className="rounded-xl bg-mk-blue hover:bg-sky-700 text-white text-sm py-3 px-4  w-64  focus:outline-none focus:shadow-outline">
                                             Registrarse
                                         </button>
-                                        <br/> <div className='text-base py-1'>ó <span className='text-sky-500'>Iniciar Sesión</span></div>
-
+                                        <br/> <div className='text-base py-1'>ó 
+                                        <Link href="../inicio-sesion">
+                                            <a><span className='text-sky-500'>Iniciar Sesión</span></a>
+                                        </Link>
+                                        </div>
                                     </div>
                                 </div>
 
