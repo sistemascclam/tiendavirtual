@@ -32,11 +32,9 @@ export default function Layout({ children, widthPadding = true  }) {
         <meta name="keywords" content={keywords} />
 
       </Head>
-      <main className={`bg-themeWhite font-poppins relative ${widthPadding ? 'pt-28 lg:px-6' : ''}`}>
+      <main className={`bg-themeWhite font-poppins relative ${widthPadding ? 'pt-0 lg:pt-24 lg:px-6' : ''}`}>
       <Header bgTransparent={!widthPadding} />
-        <div className={ widthPadding ? `max-w-8xl mx-auto px-10` : '' }>
           {children}
-        </div>
       </main>
     </>
   )

@@ -10,6 +10,15 @@ module.exports = {
       },
       zIndex:{
         '2000': '2000',
+      },
+      borderWidth: {
+      '1': '1px',
+      },
+      maxWidth:{
+        '8xl': '1920px',
+      },
+      boxShadow:{
+        'card':'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px'
       }
     },
   },
