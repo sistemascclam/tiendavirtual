@@ -19,7 +19,7 @@ export default function VerificarCorreo() {
           </button>
         </Link>
 
-        <img className=" w-96 h-90 relative left-52 absolute top-36" src='../images/3d-fluency-blue-paper-plane.png'>
+        <img className=" w-96 h-90 left-52 absolute top-36" src='../images/3d-fluency-blue-paper-plane.png'>
         </img>
       </div>
     </body>

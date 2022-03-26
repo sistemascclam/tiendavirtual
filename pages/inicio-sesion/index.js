@@ -52,7 +52,7 @@ export default function Login() {
                                                         <span className="absolute inset-y-0 right-3 flex items-center pl-2" onClick={()=>setTipoPassCliente(tipoPassCliente=='password' ? 'text':'password') }>
                                                             {tipoPassCliente=='password' ? eye:eyes_off}
                                                         </span>
-                                                        <input type={tipoPassCliente} placeholder="Contraseña*" name="password" id="password" className="bg-neutral-200 border border-neutral-200 text-gray-900 text-sm rounded-lg text-sm   block w-full  shadow-sm focus:outline-none  focus:ring-sky-500 focus:ring-1 sm:text-sm" />
+                                                        <input type={tipoPassCliente} placeholder="Contraseña*" name="password" id="password" className="bg-neutral-200 border border-neutral-200 text-gray-900 text-sm rounded-lg  block w-full  shadow-sm focus:outline-none  focus:ring-sky-500 focus:ring-1 sm:text-sm" />
                                                     </label>
                                                 </div> 
                                             </div>
