@@ -19,28 +19,18 @@ export default function Login() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21" />
                     </svg>;
     return (
-        <Layout home>
+        <Layout widthPadding={false}>
             <Head>
                 <title>Inicio de Sesión | {siteTitle}</title>
             </Head>
                 <div className='relative'>
-                    <div className="grid grid-cols-1 divide-y h-screen     ">
+                    <div className="grid grid-cols-1 divide-y h-screen">
                         <div className='bg-mk-blue'>
-                            <div  className=' min-h-fit bg-mk-blue py-4 px-4'>
-                                <div className=' flex'>
-                                    <img
-                                        className=" h-10 w-10  bg-slate-50 rounded-full py-2 px-1"
-                                        src="../../images/cclamlogotipo.png"
-                                        alt="Logo"
-                                    />
-                                    <span className='text-lg text-slate-50 py-2 px-2'>MarketPlace </span>
-                                </div>
-                            </div>
                         </div>
                         <div className=''>
                         </div>
-                        <div className=" pt-16  w-full flex  justify-center  absolute">
-                            <div className=" p-6 w-96 bg-white rounded-lg border border-gray-200 shadow-xl ">
+                        <div className=" pt-52  w-full flex  justify-center  absolute">
+                            <div className=" p-6 w-96 bg-white rounded-3xl border border-gray-200 shadow-xl ">
                                 <div className='text-center text-2xl text-black py-4'>
                                     <b>Iniciar Sesión</b> 
                                     <div className='text-center  text-xs py-4'>
@@ -55,7 +45,7 @@ export default function Login() {
                                     <div className=' w-full'>
                                             <div className="grid grid-cols-1 gap-1 p-4  w-full"  > 
                                                 <div className="mb-6">
-                                                    <input type="text" id="txtC_documento" autocomplete="off" className="bg-neutral-200 border border-neutral-200 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  " placeholder="Correo*"  />
+                                                    <input type="text" id="txtC_documento" autoComplete="off" className="bg-neutral-200 border border-neutral-200 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  " placeholder="Correo*"  />
                                                 </div>  
                                                 <div className="mb-6 col-start-1   ">
                                                     <label className="relative block">

@@ -1,14 +1,15 @@
 module.exports = {
-  darkMode: false, // or 'media' or 'class'
-  content: [],
+  content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   theme: {
     fontFamily: {
-      'poppins': ['Poppins'],
+      'poppins': ['Nunito'],
     },
     extend: {
       colors:{
-        "mk-blue":'#0674EC',
-        purple:'#702CDD',
+        "mk-blue":'#0674EC'
+      },
+      zIndex:{
+        '2000': '2000',
       }
     },
   },
