@@ -6,7 +6,7 @@ export const siteURL = 'https://www.cclam.org.pe/'
 export const siteImage = 'https://www.cclam.org.pe/images/post.png'
 export const keywords = 'marketplace virtual, marketplace, virtual, tienda, cclam, chiclayo, camara, comercio, lambayeque'
 
-export default function Layout({ children, widthPadding = true  }) {
+export default function Layout({ children, widthPadding = true }) {
 
   return (
     <>
@@ -32,9 +32,9 @@ export default function Layout({ children, widthPadding = true  }) {
         <meta name="keywords" content={keywords} />
 
       </Head>
-      <main className={`bg-themeWhite font-poppins relative ${widthPadding ? 'pt-0 lg:pt-24 lg:px-6' : ''}`}>
-      <Header bgTransparent={!widthPadding} />
-          {children}
+      <main className={`bg-themeWhite font-poppins relative ${widthPadding ? 'pt-0 lg:pt-28 lg:px-6' : ''}`}>
+        <Header bgTransparent={!widthPadding} />
+        {children}
       </main>
     </>
   )

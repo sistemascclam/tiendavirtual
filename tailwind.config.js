@@ -6,6 +6,7 @@ module.exports = {
     },
     extend: {
       colors:{
+        "themeWhite":'#eeeff8',
         "mk-blue":'#0674EC'
       },
       zIndex:{

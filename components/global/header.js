@@ -37,7 +37,7 @@ export default function NavBar({ bgTransparent }) {
 
   return (
     <>
-      <nav className={`fixed top-0 bg-mk-blue ${navTransparent ? 'py-2 lg:pt-2 lg:pb-0' : 'shadow-lg'} ${bgTransparent ? 'py-2' : ''} inset-x-0 z-2000`}>
+      <nav className={`fixed top-0 bg-white ${navTransparent ? 'pt-1' : 'shadow-md'} ${bgTransparent ? 'py-1' : ''} inset-x-0 z-2000`}>
         <Transition.Root show={open} as={Fragment}>
           <Dialog as="div" className="fixed inset-0 flex z-2000 lg:hidden" onClose={setOpen}>
             <Transition.Child
@@ -145,91 +145,26 @@ export default function NavBar({ bgTransparent }) {
             <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
               <div className="flex-shrink-0 flex items-center  justify-center rounded-full">
                 <Link href={"/"}>
-                  <a className="flex lg:hidden bg-white rounded-full w-14 h-14 items-center justify-center">
+                  <a className="flex lg:hidden items-center justify-center">
                     <Image
                       src="/images/cclamlogotipo.png"
                       alt="Logo"
-                      width={48}
-                      height={34.531}
+                      width={54}
+                      height={40.531}
                     />
                   </a>
                 </Link>
                 <Link href={"/"}>
-                  <a className='hidden lg:flex items-center justify-center bg-white rounded-full w-14 h-14'>
+                  <a className='hidden lg:flex items-center justify-center'>
                     <Image
                       src="/images/cclamlogotipo.png"
                       alt="Logo"
-                      width={48}
-                      height={34.531}
+                      width={54}
+                      height={40.531}
                     />
                   </a>
                 </Link>
               </div>
-              <Popover.Group className="hidden lg:ml-8 lg:block lg:self-stretch">
-                <div className="h-full flex space-x-8">
-                  <Popover className="flex">
-                    <>
-                      <div className="relative flex">
-                        <Popover.Button
-                          onMouseEnter={() => setOpenMenuWeb(true)}
-                          onMouseLeave={() => setOpenMenuWeb(false)}
-                          open={openMenuWeb}
-                          className={classNames(
-                            openMenuWeb
-                              ? 'border-blue-600'
-                              : 'border-transparent',
-                            'text-gray-300 hover:border-blue-600 relative z-10 flex items-center transition-colors ease-out duration-200 text-sm font-medium border-b-2 -mb-px pt-px'
-                          )}
-                        >
-                          Contenido
-                          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
-                            <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
-                          </svg>
-                        </Popover.Button>
-                      </div>
-                      <Transition
-                        as={Fragment}
-                        show={openMenuWeb}
-                        enter="transition ease-out duration-300"
-                        enterFrom="opacity-0"
-                        enterTo="opacity-100"
-                        leave="transition ease-in duration-150"
-                        leaveFrom="opacity-100"
-                        leaveTo="opacity-0"
-                      >
-                        <Popover.Panel
-                          onMouseEnter={() => setOpenMenuWeb(true)}
-                          onMouseLeave={() => setOpenMenuWeb(false)}
-                          static={true} className="absolute z-2000 top-full max-w-sm inset-x-0 mx-14 text-sm text-gray-400">
-                          <div className="absolute inset-0 top-1/2" aria-hidden="true" />
-                          <div className="relative bg-white mt-3 rounded-xl shadow-xl transition-none">
-                            <div className="mx-auto px-8 py-8 row-start-1 grid grid-cols-1 gap-y-6 gap-x-10 text-sm">
-                              <div>
-                                <p id={`especialidades-heading`} className="font-medium text-md cursor-default">
-                                  Categorías
-                                </p>
-                                <ul
-                                  role="list"
-                                  aria-labelledby={`especialidades-heading`}
-                                  className="mt-6 space-y-6 sm:mt-4 sm:space-y-2"
-                                >
-                                  {data?.map((category, sec_k) => (
-                                    <li key={sec_k} className="flex">
-                                      <a href={`#${category.slug}`} className="text-white hover:text-blue-600 cursor-pointer text-lg transition-all duration-200 ease-in-out">
-                                        {category.name}
-                                      </a>
-                                    </li>
-                                  ))}
-                                </ul>
-                              </div>
-                            </div>
-                          </div>
-                        </Popover.Panel>
-                      </Transition>
-                    </>
-                  </Popover>
-                </div>
-              </Popover.Group>
               <SearchButton />
             </div>
             <div className={`absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 ${!session && status === 'loading' ? 'opacity-0' : 'opacity-100'} transition-all ease-out`}>
@@ -241,15 +176,15 @@ export default function NavBar({ bgTransparent }) {
         </div>
         {
           !bgTransparent ?
-          <div className='hidden lg:flex bg-white mt-2 shadow-md h-12 justify-center'>
-            <div className='px-1 mx-3 hover:text-mk-blue cursor-pointer my-auto transition-all ease-in-out duration-150'>Calzado</div>
-            <div className='px-1 mx-3 hover:text-mk-blue cursor-pointer my-auto transition-all ease-in-out duration-150'>Ropa de  Dama</div>
-            <div className='px-1 mx-3 hover:text-mk-blue cursor-pointer my-auto transition-all ease-in-out duration-150'>Ropa de Caballero</div>
-            <div className='px-1 mx-3 hover:text-mk-blue cursor-pointer my-auto transition-all ease-in-out duration-150'>Ropa de Niño</div>
-            <div className='px-1 mx-3 hover:text-mk-blue cursor-pointer my-auto transition-all ease-in-out duration-150'>Electrónica</div>
-            <div className='px-1 mx-3 hover:text-mk-blue cursor-pointer my-auto transition-all ease-in-out duration-150'>Cómputo</div>
-          </div>
-          : ''
+            <div className='hidden lg:flex mt-3 border-t-1 shadow-sm py-4 justify-center border-b-1'>
+              <div className='px-1 mx-3 hover:text-mk-blue cursor-pointer my-auto transition-all ease-in-out duration-150'>Calzado</div>
+              <div className='px-1 mx-3 hover:text-mk-blue cursor-pointer my-auto transition-all ease-in-out duration-150'>Ropa de  Dama</div>
+              <div className='px-1 mx-3 hover:text-mk-blue cursor-pointer my-auto transition-all ease-in-out duration-150'>Ropa de Caballero</div>
+              <div className='px-1 mx-3 hover:text-mk-blue cursor-pointer my-auto transition-all ease-in-out duration-150'>Ropa de Niño</div>
+              <div className='px-1 mx-3 hover:text-mk-blue cursor-pointer my-auto transition-all ease-in-out duration-150'>Electrónica</div>
+              <div className='px-1 mx-3 hover:text-mk-blue cursor-pointer my-auto transition-all ease-in-out duration-150'>Cómputo</div>
+            </div>
+            : ''
         }
       </nav>
     </>
@@ -271,7 +206,7 @@ const SearchButton = () => {
           onChange={(e) => setsearch(e.target.value)}
           value={search ? search : ""}
           placeholder={"Buscar en MarketPlace CCLAM"}
-          className={`bg-white bg-opacity-95 pl-12 w-full mx-auto py-2 ${search ? 'text-base rounded-t-xl focus:ring-0 border-b-0 border-x-1 border-t-1 border-white' : 'text-sm rounded-xl border-white border-2 focus:border-white'} ring-0 focus:text-base text-gray-800`}
+          className={`border-0 bg-slate-200 bg-opacity-95 pl-12 w-full mx-auto py-3 ${search ? 'text-base rounded-full' : 'text-sm rounded-full'} ring-0 focus:text-base text-gray-800`}
         />
         {
           search && search.length >= 2 ?
@@ -366,7 +301,7 @@ const OpcionesNoAuth = () => <>
   <button
     type="button"
     title="Carrito de compras"
-    className="hidden lg:block mx-1 p-1 rounded-full hover:text-blue-200 text-white"
+    className="hidden lg:block mx-1 p-1 rounded-full hover:text-blue-400 text-blue-600"
   >
     <span className="sr-only">Ver carrito de compra</span>
     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -376,7 +311,7 @@ const OpcionesNoAuth = () => <>
   <button
     type="button"
     title="Lista de deseos"
-    className="hidden lg:block mx-1 p-1 rounded-full hover:text-blue-200 text-white"
+    className="hidden lg:block mx-1 p-1 rounded-full hover:text-blue-400 text-blue-600"
   >
     <span className="sr-only">Ver lista de deseos</span>
     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
